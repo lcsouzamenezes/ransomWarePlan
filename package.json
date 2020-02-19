@@ -1,0 +1,31 @@
+{
+  "name": "ransomwareplan",
+  "version": "1.0.0",
+  "description": "Our one-page explainer gives insight, strategies and a plan to deal with ransomware attackes, catastrophic data loss and more.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theMightyT/ransomWarePlan.git"
+  },
+  "keywords": [
+    "ransomeware",
+    "strategy",
+    "recovery"
+  ],
+  "author": "TVR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theMightyT/ransomWarePlan/issues"
+  },
+  "homepage": "https://github.com/theMightyT/ransomWarePlan#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

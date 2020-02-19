@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <title>RansomWare!</title>
+</head>
+<body>
+    <h1 class="hidden">This is my ransomware app page</h1>
+
+    <main id="app">
+        <h1>{{message}}</h1>
+        <header>
+            <img src="" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <!-- <router-link to="/">Home</router-link> -->
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <!-- <router-link to="/get-pdf">Download PDF</router-link> -->
+                        <span>Download</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- render the components here -->
+        <router-view></router-view>
+    </main>
+
+    <!-- let's put a sticky footer here! -->
+    <footer></footer>
+
+    <script defer src="js/main.js" type="module"></script>
+</body>
+</html>
