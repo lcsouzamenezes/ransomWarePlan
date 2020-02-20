@@ -1,19 +1,34 @@
 export default {
     template: `
         <section>
-            <h1 class="hidden">This is the download component</h1>
+            <h1 class="hidden">Access Our Document</h1>
+
+            <h2 class="form-header">Complete the form below</h2>
 
             <form v-on:submit.prevent="handleMail" action="">
-                <label for="usermail">Please enter your email address:</label>
-                <input type="email" name="usermail" required>
+                <div class="input-wrapper">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" name="firstname" required placeholder="Enter your first name">
+                </div>
 
-                <label for="name">Please enter your company name (optional)</label>
-                <input type="text" name="company" required>
+                <div class="input-wrapper">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" name="lastname" required placeholder="Enter your last name">
+                </div>
 
-                <label for="message">Please enter your message:</label>
-                <textarea name="message" id="user-message" cols="30" rows="10"></textarea>
+                <div class="input-wrapper">  
+                    <label for="usermail">Email:</label>
+                    <input type="email" name="usermail" required placeholder="Enter email address">
+                </div>
 
-                <input type="submit" value="Send!" class="submit-button">
+                <div class="input-wrapper">
+                    <label for="companyname">Company:</label>
+                    <input type="text" name="companyname" required placeholder="Enter your company name">
+                </div>
+
+                <div class="submit-wrapper">
+                    <input type="submit" value="Submit" class="submit-button">
+                </div>
             </form>           
         </section>
     `,

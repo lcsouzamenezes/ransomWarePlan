@@ -1,5 +1,5 @@
 export default {
     template: `
-        <h1>this is the home component</h1>
+        <h1 class="hidden">Home page</h1>
     `
 }
