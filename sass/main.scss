@@ -1,0 +1,13 @@
+@import "./modules/_reset.scss";
+
+@import "./modules/_vars";
+@import "./modules/_headerAndNav";
+
+// main styles here - this is for mobile, and mediaQueries contain responsive overrides
+
+@import "./modules/_default";
+
+@import "./modules/_form";
+@import "./modules/_footer";
+
+@import "./modules/_mediaQueries";
