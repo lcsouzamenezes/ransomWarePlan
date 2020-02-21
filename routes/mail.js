@@ -20,11 +20,11 @@ router.post("/", (req, res) => {
 	// get the mail options from the form -> the url params using bodyParser middleware
 
 	const mailOptions = {
-		from: req.body.usermail,
+		from: "Disaster Recovery Microsite",
 		to: 'halvas_trevor@halvas.ca',
 		replyTo: req.body.usermail,
-		subject: `From portfolio site: Subject = ${req.body.subject || 'none'}`, // Subject line
-		text: req.body.companyname
+		subject: `From DRM site: Subject = ${req.body.subject || 'Request For Access'}`, // Subject line
+		text: `Sent from ${req.body.firstname + " " + req.body.lastname + "at " + req.body.companyname}`
 	};
 
 	transporter.sendMail(mailOptions, function (err, info) {

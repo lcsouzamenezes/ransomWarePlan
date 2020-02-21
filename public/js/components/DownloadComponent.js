@@ -1,6 +1,6 @@
 export default {
     template: `
-        <section>
+        <section id="formSection">
             <h1 class="hidden">Access Our Document</h1>
 
             <h2 class="form-header">Complete the form below</h2>
@@ -75,14 +75,30 @@ export default {
     
                     if (data.response.includes("OK")) {
                         // we successfully sent an email via gmail and nodemailer!
-                        // flash success here, reset the form
-                        //form.reset();
-                        this.$router.push("/show-pdf");
-                        //alert("email was sent!"); // DO NOT use alerts. they are so hacky and gross.
+                       // reset the form
+                        document.querySelector('form').reset();
+
+                        // flash message
+                        this.flashMessage({msg: "From submission successful! One moment, redirecting...", class: "submit-success"});
+                        
+                        // maybe disable pdf link here?
+                    } else {
+                        this.flashMessage({ msg: "Submission faild! Please try again", class: "submit-fail"})
                     }
-                }) // this will be a success or fail message from the server
+                })
             .catch((err) => console.log(err));
             // end of our fetch call
-        } // end of handle mail function
+        }, // end of handle mail function
+
+        flashMessage(msg) {
+            // do our flash messaging here (success or failure)
+            // and then push the pdf route to the router if we managed to send the form
+            console.log(msg);
+
+            setTimeout(function() {
+                this.$router.push("/show-pdf");
+            }, 800);
+            
+        }
     }
 }
