@@ -42,11 +42,12 @@ export default {
 
     created: function() {
         console.log('form ready');
+        this.$emit('enablehomebutton');
     },
 
     methods: {
         handleMail() {
-            debugger;
+            //debugger;
 
             let formdata = new FormData(document.querySelector('form')),
             maildata = {};

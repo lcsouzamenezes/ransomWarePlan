@@ -6,10 +6,19 @@ import router from "./components/Router.js";
 
     const myVM = new Vue({
         data: {
-            message: "welcome to my awesome vue app"
+            message: "welcome to my awesome vue app",
+            isAuthenticated: false,
+            showHome: false
         },
 
         methods: {
+            setAuthenticated() {
+                this.isAuthenticated = true;
+            },
+
+            setHomeActive() {
+                this.showHome = true;
+            }
 
         },
 
