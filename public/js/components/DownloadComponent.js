@@ -95,7 +95,7 @@ export default {
             // and then push the pdf route to the router if we managed to send the form
             console.log(msg);
 
-            setTimeout(function() {
+            setTimeout(() => {
                 this.$router.push("/show-pdf");
             }, 800);
             

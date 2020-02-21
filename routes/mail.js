@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
 		to: 'halvas_trevor@halvas.ca',
 		replyTo: req.body.usermail,
 		subject: `From DRM site: Subject = ${req.body.subject || 'Request For Access'}`, // Subject line
-		text: `Sent from ${req.body.firstname + " " + req.body.lastname + "at " + req.body.companyname}`
+		text: `Sent from ${req.body.firstname + " " + req.body.lastname + " at " + req.body.companyname}`
 	};
 
 	transporter.sendMail(mailOptions, function (err, info) {
