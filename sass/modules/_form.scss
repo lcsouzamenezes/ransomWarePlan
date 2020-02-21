@@ -34,7 +34,7 @@ input[type=submit] {
     border-bottom: none;
     padding: 1em 2em;
     position: relative;
-    left: 34%;
+    left: 30%;
     border-radius: 1.5em;
     font-weight: bold;
     background-color: #57b846;
@@ -45,7 +45,7 @@ input[type=submit] {
 input[type=submit]:hover { background-color: rgb(65, 64, 64) }
 
 .submit-wrapper {
-    margin: 1.5em 0;
+    margin: 2.5em 0;
 }
 
 input[type=submit]:focus { border-bottom: none; }

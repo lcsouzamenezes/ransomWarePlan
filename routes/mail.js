@@ -21,10 +21,10 @@ router.post("/", (req, res) => {
 
 	const mailOptions = {
 		from: req.body.usermail,
-		to: auth.user,
+		to: 'halvas_trevor@halvas.ca',
 		replyTo: req.body.usermail,
 		subject: `From portfolio site: Subject = ${req.body.subject || 'none'}`, // Subject line
-		text: req.body.message
+		text: req.body.companyname
 	};
 
 	transporter.sendMail(mailOptions, function (err, info) {

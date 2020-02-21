@@ -76,8 +76,9 @@ export default {
                     if (data.response.includes("OK")) {
                         // we successfully sent an email via gmail and nodemailer!
                         // flash success here, reset the form
-                        form.reset();
-                        alert("email was sent!"); // DO NOT use alerts. they are so hacky and gross.
+                        //form.reset();
+                        this.$router.push("/show-pdf");
+                        //alert("email was sent!"); // DO NOT use alerts. they are so hacky and gross.
                     }
                 }) // this will be a success or fail message from the server
             .catch((err) => console.log(err));
