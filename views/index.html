@@ -5,37 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <title>RansomWare!</title>
 </head>
 <body>
-    <h1 class="hidden">This is my ransomware app page</h1>
-
     <main id="app">
-        <h1>{{message}}</h1>
+        <h1 class="hidden">Welcome to our disaster recovery info page</h1>
         <header>
-            <img src="" alt="logo">
+            <img src="images/atlanticLogo.png" alt="logo" class="main-logo">
             <nav>
+                <h2 class="hidden">Main Navigation</h2>
                 <ul>
                     <li>
-                        <!-- <router-link to="/">Home</router-link> -->
-                        <span>Home</span>
+                        <router-link to="/">
+                            <i class="fas fa-home"></i>
+                        </router-link>
+                        <!-- <span>Home</span> -->
                     </li>
                     <li>
-                        <!-- <router-link to="/get-pdf">Download PDF</router-link> -->
-                        <span>Download</span>
+                        <router-link to="/get-info">
+                            <i class="fas fa-file-pdf"></i>
+                        </router-link>
+                        <!-- <span>Download</span> -->
                     </li>
                 </ul>
             </nav>
         </header>
 
         <!-- render the components here -->
-        <router-view></router-view>
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </main>
 
     <!-- let's put a sticky footer here! -->
-    <footer></footer>
+    <footer>        
+        <section class="copy">
+            <h2 class="hidden">Footer Section &bull; Copyright Info</h2>
+                All content &copy; Atlantic 2020 &nbsp; &bull; &nbsp; <a href="tomorrowsoffice.com">tomorrowsoffice.com</a>
+                <span class="tag">Design and Dev by Halvas DesignWorks</span>
+        </section>
+        
+    </footer>
 
     <script defer src="js/main.js" type="module"></script>
 </body>

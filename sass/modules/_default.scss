@@ -1,0 +1,49 @@
+html, body { height: 100% }
+
+.hidden { display: none; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    // flexbox stuff for sticky footer / layout
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+nav { 
+    float: right; 
+    text-align: right;
+    position: relative;
+    top: 0.8em;
+    right: 0.4em;
+
+    ul li { 
+        display: inline-block; 
+        font-size: 2em; 
+        padding: 0.2em;
+        cursor: pointer;
+
+        i {  color: rgb(65, 64, 64); }
+        i:hover { color:hsla(120, 76%, 44%, 0.89); }
+    
+    }
+}
+
+.main-logo { width: 230px; }
+
+footer { flex-shrink: 0; }
+
+// router transition effect
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.3s
+  }
+  
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }

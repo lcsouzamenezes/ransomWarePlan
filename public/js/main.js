@@ -1,12 +1,9 @@
-(() => {
-    // let's just use Vue for all things
+// import components here
+import router from "./components/Router.js";
 
-    let router = new VueRouter({
-        routes: [
-            { path: "/", name: "home", component: HomeComponent }
-            { path: "/get-info", name: "download", component: DownloadComponent }
-        ]
-    })
+(() => {
+    // let's just use Vue for all the things
+
     const myVM = new Vue({
         data: {
             message: "welcome to my awesome vue app"
@@ -18,6 +15,8 @@
 
         created: function() {
             console.log('howdy from vue!');
-        }
+        },
+
+        router
     }).$mount("#app");
 })()

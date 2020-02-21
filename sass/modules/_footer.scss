@@ -1,0 +1,18 @@
+footer {
+    border: thin dashed black;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+
+    .tag { 
+        // float: left; 
+        color: #333;
+        font-size: 0.7em;
+        padding-top: 0.8em;
+        display: block;
+    }
+
+    a { color: white; text-decoration: none; }
+    a:hover { color: blue; }
+}
