@@ -4,8 +4,6 @@ export default {
     `,
 
     created: function() {
-        if (!this.$parent.isAuthenticated) {
-            this.$router.replace("/get-info");
-        }
+        this.$emit("enablehomebutton");
     }
 }

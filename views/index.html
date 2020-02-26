@@ -20,13 +20,13 @@
             <nav>
                 <h2 class="hidden">Main Navigation</h2>
                 <ul>
-                    <li v-if="showHome">
+                    <li v-if="showHome"  @click="showScroll">
                         <router-link to="/">
                             <i class="fas fa-home"></i>
                         </router-link>
                         <!-- <span>Home</span> -->
                     </li>
-                    <li>
+                    <li v-if="enableScrollTo">
                         <a @click.prevent="scrollToTarget" href="#reg-form">
                             <i class="fas fa-file-download"></i>
                         </a>

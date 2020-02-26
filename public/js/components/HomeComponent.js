@@ -33,9 +33,15 @@ export default {
             <h2>Fill out the form below for access to our guide</h2>
         </section>
 
-        <rForm id="reg-form" class="form-section"></rForm>
+        <rForm id="reg-form" class="form-section" @authsuccess="authsuccess"></rForm>
     </div>        
     `,
+
+    methods: {
+        authsuccess() {
+            this.$emit("authsuccess");
+        }
+    },
 
     components: {
         rForm: DownloadComponent
