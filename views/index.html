@@ -27,9 +27,9 @@
                         <!-- <span>Home</span> -->
                     </li>
                     <li>
-                        <router-link to="/get-info">
-                            <i class="fas fa-file-pdf"></i>
-                        </router-link>
+                        <a @click.prevent="scrollToTarget" href="#reg-form">
+                            <i class="fas fa-file-download"></i>
+                        </a>
                         <!-- <span>Download</span> -->
                     </li>
                 </ul>
@@ -38,7 +38,7 @@
 
         <!-- render the components here -->
         <transition name="fade" mode="out-in">
-            <router-view @enablehomebutton="setHomeActive"></router-view>
+            <router-view @enablehomebutton="setHomeActive" @authsuccess="setAuthenticated"></router-view>
         </transition>
     </main>
 

@@ -18,8 +18,17 @@ import router from "./components/Router.js";
 
             setHomeActive() {
                 this.showHome = true;
-            }
+            },
 
+            scrollToTarget(event) {
+                let theTarget = document.querySelector(`${event.currentTarget.getAttribute("href")}`).offsetTop;
+                // scroll the form into view
+                window.scrollTo({
+                    top: theTarget, //event.currentTarget.getAttribute("href"),
+                    behavior: "smooth"
+                })
+
+            }
         },
 
         created: function() {
