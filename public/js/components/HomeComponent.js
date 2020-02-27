@@ -10,13 +10,15 @@ export default {
 
             <div class="image-bar">
                 <div>
-                <img src="images/disaster.jpg" alt="disaster image">
+                    <img src="images/disaster.jpg" alt="disaster image">
                 </div>
+                
                 <div>
-                <img src="images/cyberattack.jpg" alt="disaster image">
+                    <img src="images/coffee_spill.jpg" alt="human error image">
                 </div>
+
                 <div>
-                <img src="images/coffee_spill.jpg" alt="disaster image">
+                    <img src="images/cyberattack.jpg" alt="cyber attack image">
                 </div>
             </div>
 
