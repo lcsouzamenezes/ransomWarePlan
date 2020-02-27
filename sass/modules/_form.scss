@@ -1,4 +1,11 @@
-.form-header { text-align: center; margin-bottom: 1.8em; }
+.form-section { margin-top: 2em; background-color: #f5f5f5; padding: 2.5em 0; }
+
+.form-header { 
+    text-align: center; 
+    margin: 1.8em;
+    font-size: 1.05em;
+    font-weight: bold;
+}
 
 label {
     display: inline-block;
@@ -12,7 +19,7 @@ label {
 form { 
     width: 90%;
     max-width: 765px;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 
 
@@ -23,7 +30,8 @@ input, textarea {
     outline: none;
     width: 60%;
     padding-bottom: 1em;
-    border-bottom: thin solid rgba(5, 5, 5, 0.5); 
+    border-bottom: thin solid rgba(5, 5, 5, 0.5);
+    background-color: transparent;
 }
 
 input:focus { border-bottom: thin solid hsla(120, 76%, 44%, 0.89) }
@@ -34,7 +42,7 @@ input[type=submit] {
     border-bottom: none;
     padding: 1em 2em;
     position: relative;
-    left: 30%;
+    // left: 25%;
     border-radius: 1.5em;
     font-weight: bold;
     background-color: #57b846;
@@ -46,6 +54,7 @@ input[type=submit]:hover { background-color: rgb(65, 64, 64) }
 
 .submit-wrapper {
     margin: 2.5em 0;
+    text-align: center;
 }
 
 input[type=submit]:focus { border-bottom: none; }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -20,16 +22,16 @@
             <nav>
                 <h2 class="hidden">Main Navigation</h2>
                 <ul>
-                    <li v-if="showHome">
+                    <li v-if="showHome"  @click="showScroll">
                         <router-link to="/">
                             <i class="fas fa-home"></i>
                         </router-link>
                         <!-- <span>Home</span> -->
                     </li>
-                    <li>
-                        <router-link to="/get-info">
-                            <i class="fas fa-file-pdf"></i>
-                        </router-link>
+                    <li v-if="enableScrollTo">
+                        <a @click.prevent="scrollToTarget" href="#reg-form">
+                            <i class="fas fa-file-download"></i>
+                        </a>
                         <!-- <span>Download</span> -->
                     </li>
                 </ul>
@@ -38,7 +40,7 @@
 
         <!-- render the components here -->
         <transition name="fade" mode="out-in">
-            <router-view @enablehomebutton="setHomeActive"></router-view>
+            <router-view @enablehomebutton="setHomeActive" @authsuccess="setAuthenticated"></router-view>
         </transition>
     </main>
 

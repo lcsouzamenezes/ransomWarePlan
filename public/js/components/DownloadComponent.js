@@ -3,7 +3,7 @@ export default {
         <section id="formSection">
             <h1 class="hidden">Access Our Document</h1>
 
-            <h2 class="form-header">Complete the form below</h2>
+            <!-- <h2 class="form-header">Please complete the form below</h2> -->
 
             <form v-on:submit.prevent="handleMail" action="">
                 <div class="input-wrapper">
@@ -27,7 +27,7 @@ export default {
                 </div>
 
                 <div class="submit-wrapper">
-                    <input type="submit" value="Submit" class="submit-button">
+                    <input type="submit" value="Download the Guide" class="submit-button">
                 </div>
             </form>           
         </section>
@@ -84,7 +84,7 @@ export default {
                         
                         // maybe disable pdf link here?
                     } else {
-                        this.flashMessage({ msg: "Submission faild! Please try again", class: "submit-fail"})
+                        this.flashMessage({ msg: "Submission failed! Please try again", class: "submit-fail"})
                     }
                 })
             .catch((err) => console.log(err));
@@ -93,13 +93,12 @@ export default {
 
         flashMessage(msg) {
             // do our flash messaging here (success or failure)
+
+            
             // and then push the pdf route to the router if we managed to send the form
             console.log(msg);
 
-            setTimeout(() => {
-                this.$router.push("/show-pdf");
-            }, 800);
-            
+            this.$emit('authsuccess');            
         }
     }
 }
