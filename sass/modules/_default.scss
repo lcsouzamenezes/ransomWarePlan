@@ -70,3 +70,10 @@ main {
 
 footer { flex-shrink: 0; }
 
+// try iframe fix
+.iframe-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+iframe { width: 100%; height: 80vh; }
+

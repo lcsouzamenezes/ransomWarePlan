@@ -14,7 +14,7 @@ import router from "./components/Router.js";
 
         methods: {
             setAuthenticated() {
-                debugger;
+                //debugger;
 
                 this.isAuthenticated = true;
 
@@ -25,7 +25,7 @@ import router from "./components/Router.js";
             },
 
             setHomeActive() {
-                debugger;
+                //debugger;
                 this.showHome = true;
             },
 

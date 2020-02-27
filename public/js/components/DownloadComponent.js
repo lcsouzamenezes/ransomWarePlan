@@ -27,7 +27,7 @@ export default {
                 </div>
 
                 <div class="submit-wrapper">
-                    <input type="submit" value="Get the Guide" class="submit-button">
+                    <input type="submit" value="Download the Guide" class="submit-button">
                 </div>
             </form>           
         </section>

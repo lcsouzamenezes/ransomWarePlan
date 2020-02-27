@@ -42,7 +42,7 @@ input[type=submit] {
     border-bottom: none;
     padding: 1em 2em;
     position: relative;
-    left: 25%;
+    // left: 25%;
     border-radius: 1.5em;
     font-weight: bold;
     background-color: #57b846;
@@ -54,6 +54,7 @@ input[type=submit]:hover { background-color: rgb(65, 64, 64) }
 
 .submit-wrapper {
     margin: 2.5em 0;
+    text-align: center;
 }
 
 input[type=submit]:focus { border-bottom: none; }

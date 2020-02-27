@@ -6,7 +6,7 @@ export default {
     <div>
         <section class="home-wrapper">
             <h1 class="hidden">Home page</h1>
-            <h2 id="main-header">How to build a Backup and Disaster Recovery Plan</h2>
+            <h2 id="main-header">How To Build A Backup and Disaster Recovery Plan</h2>
 
             <div class="image-bar">
                 <div>
@@ -43,7 +43,7 @@ export default {
                     Strategies to maintain business continuity after a disaster strikes
                 </li>
             </ul>
-            <h3 class="subhead">Fill out the form below for access to our guide!</h3>
+            <h3 class="subhead"> Download your FREE guide now to learn how to build a back-up and disaster recovery plan for your business!</h3>
         </section>
 
         <rForm id="reg-form" class="form-section" @authsuccess="authsuccess"></rForm>
