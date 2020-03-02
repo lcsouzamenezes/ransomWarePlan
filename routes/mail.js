@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
 
 	const mailOptions = {
 		from: "Disaster Recovery Microsite",
-		to: 'halvas_trevor@halvas.ca',
+		to: 'devon@in2communications.com',
 		replyTo: req.body.usermail,
 		subject: `From DRM site: Subject = ${req.body.subject || 'Request For Access'}`, // Subject line
 		text: `Sent from ${req.body.firstname + " " + req.body.lastname + " at " + req.body.companyname}`
