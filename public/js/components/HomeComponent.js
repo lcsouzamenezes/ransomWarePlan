@@ -48,14 +48,22 @@ export default {
             <h3 class="subhead"> Download your FREE guide now to learn how to build a back-up and disaster recovery plan for your business!</h3>
         </section>
 
-        <rForm id="reg-form" class="form-section" @authsuccess="authsuccess"></rForm>
+        <rForm id="reg-form" class="form-section" @authsuccess="authsuccess" @authfail="authfail"></rForm>
     </div>        
     `,
 
     methods: {
         authsuccess() {
             this.$emit("authsuccess");
+        },
+
+        authfail() {
+            this.$emit("authfail");
         }
+    },
+
+    created: function () {
+        console.log('home component created');
     },
 
     components: {

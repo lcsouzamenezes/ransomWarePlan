@@ -13,9 +13,9 @@ const transporter = mailer.createTransport({
 });
 
 router.post("/", (req, res) => {
-    console.log('send mail stuff here');
+	console.log('send mail stuff here');
 
-    console.log('body: ', req.body);
+	console.log('body: ', req.body);
 
 	// get the mail options from the form -> the url params using bodyParser middleware
 
