@@ -7,6 +7,7 @@ body {
     background: url(../images/gunmetal.jpg) repeat;
     color: black;
     font-size: 16px;
+
     // flexbox stuff for sticky footer / layout
     display: flex;
     flex-direction: column;
@@ -86,7 +87,6 @@ footer { flex-shrink: 0; }
     font-size: 1.5em;
     font-weight: 900;   
 
-    // background-color: rgba(0, 0, 0, 0.8);
     background-color: $ui-green;
     color: white;
 
@@ -101,8 +101,6 @@ footer { flex-shrink: 0; }
 .fail { background-color: $ui-red; }
 
 .show-msg { 
-    //animation-name: show-hide-messages;
-    //animation-duration: 2s;
     opacity: 1;
 }
 

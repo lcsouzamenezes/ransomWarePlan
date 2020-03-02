@@ -62,10 +62,6 @@ export default {
         }
     },
 
-    created: function () {
-        console.log('home component created');
-    },
-
     components: {
         rForm: DownloadComponent
     }
