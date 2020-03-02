@@ -18,12 +18,9 @@ import router from "./components/Router.js";
                 this.flashMessage({ message: "Submission successful, redirecting...", class: "success" });
                 this.isAuthenticated = true;
 
-                document.querySelector('form').reset();
-
                 setTimeout(() => {
                     this.$router.push("/show-pdf");
                     this.enableScrollTo = false;
-                    //this.message = "Submitting, please wait..."
 
                     // this needs to be fixed
                     window.scrollTo({
@@ -48,9 +45,7 @@ import router from "./components/Router.js";
             },
 
             setHomeActive() {
-                //debugger;
                 this.showHome = true;
-                //this.message = "Submitting, please wait..."
             },
 
             showScroll() {
@@ -67,10 +62,6 @@ import router from "./components/Router.js";
                 })
 
             }
-        },
-
-        created: function () {
-            console.log('howdy from vue!');
         },
 
         router

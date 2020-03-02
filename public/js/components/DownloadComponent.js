@@ -33,25 +33,14 @@ export default {
         </section>
     `,
 
-    data: function () {
-        // just a stub for now
-        return {
-            message: "hey"
-        }
-    },
-
     created: function () {
-        console.log('form ready');
         this.$emit('enablehomebutton');
     },
 
     methods: {
         handleMail() {
-            //debugger;
-
             // add the flash message here -> this is the initial please wait, submitting message
             document.querySelector(".flash-message").className = `flash-message show-msg`;
-
 
             let formdata = new FormData(document.querySelector('form')),
                 maildata = {};
@@ -75,21 +64,11 @@ export default {
             })
                 .then(res => res.json())
                 .then(data => {
-                    // remove this when testing is done and everything is working
-                    console.log(data);
-
-                    if (data.response.includes("OK")) {
-                        // we successfully sent an email via gmail and nodemailer!
-                        // emit the success event
-                        this.$emit('authsuccess');
-
-                        // maybe disable pdf link here?
-                    } else {
-                        this.$emit('authfail');
-                    }
+                    this.$emit((data.response.includes("OK")) ? 'authsuccess' : 'authfail');
                 })
                 .catch((err) => console.log(err));
-            // end of our fetch call
+
+            document.querySelector('form').reset();
         } // end of handle mail function
     }
 }
