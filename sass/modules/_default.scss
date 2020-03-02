@@ -18,6 +18,7 @@ main {
     flex: 1 0 auto;
     // border: 16px solid black;
     background-color: #1c272d;
+    width: 100%;
 }
 
 .image-bar { 
@@ -71,6 +72,44 @@ main {
 .main-logo { width: 200px; }
 
 footer { flex-shrink: 0; }
+
+// flash messaging
+.flash-message {
+    position: fixed;
+    top: 0; 
+    width: inherit;
+    max-width: 1024px;
+    height: 55px;
+    padding-top: 31px;
+    text-align: center;
+
+    font-size: 1.5em;
+    font-weight: 900;   
+
+    // background-color: rgba(0, 0, 0, 0.8);
+    background-color: $ui-green;
+    color: white;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.75s, background-color 0.2s;
+}
+
+.success { background-color: $ui-green; }
+.fail { background-color: $ui-red; }
+
+.show-msg { 
+    //animation-name: show-hide-messages;
+    //animation-duration: 2s;
+    opacity: 1;
+}
+
+.hide-msg { 
+    transition: opacity 0.7s 1s, background-color 0.2s !important;
+    opacity: 0;
+}
 
 // try iframe fix
 .iframe-wrapper {

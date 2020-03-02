@@ -13,15 +13,15 @@ const transporter = mailer.createTransport({
 });
 
 router.post("/", (req, res) => {
-    console.log('send mail stuff here');
+	console.log('send mail stuff here');
 
-    console.log('body: ', req.body);
+	console.log('body: ', req.body);
 
 	// get the mail options from the form -> the url params using bodyParser middleware
 
 	const mailOptions = {
 		from: "Disaster Recovery Microsite",
-		to: 'devon@in2communications.com',
+		to: 'halvas_trevor@halvas.ca',
 		replyTo: req.body.usermail,
 		subject: `From DRM site: Subject = ${req.body.subject || 'Request For Access'}`, // Subject line
 		text: `Sent from ${req.body.firstname + " " + req.body.lastname + " at " + req.body.companyname}`

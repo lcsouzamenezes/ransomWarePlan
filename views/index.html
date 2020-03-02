@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <title>.: Your RansomWare Plan :.</title>
 </head>
+
 <body>
     <main id="app">
         <h1 class="hidden">Welcome to our disaster recovery info page</h1>
@@ -22,7 +24,7 @@
             <nav>
                 <h2 class="hidden">Main Navigation</h2>
                 <ul>
-                    <li v-if="showHome"  @click="showScroll">
+                    <li v-if="showHome" @click="showScroll">
                         <router-link to="/">
                             <i class="fas fa-home"></i>
                         </router-link>
@@ -40,20 +42,30 @@
 
         <!-- render the components here -->
         <transition name="fade" mode="out-in">
-            <router-view @enablehomebutton="setHomeActive" @authsuccess="setAuthenticated"></router-view>
+            <router-view @enablehomebutton="setHomeActive" @authsuccess="setAuthenticated" @authfail="setAuthError">
+            </router-view>
         </transition>
+
+        <!-- client-side flash messaging -->
+        <section class="flash-message" @transitionend="setMessage">
+            {{ message }}
+        </section>
     </main>
 
+
+
     <!-- let's put a sticky footer here! -->
-    <footer>        
+    <footer>
         <section class="copy">
             <h2 class="hidden">Footer Section &bull; Copyright Info</h2>
-                All content &copy; Atlantic 2020 &nbsp; &bull; &nbsp; <a href="http://www.tomorrowsoffice.com" _target="blank">tomorrowsoffice.com</a>
-                <span class="tag">Design and Dev by Halvas DesignWorks</span>
+            All content &copy; Atlantic 2020 &nbsp; &bull; &nbsp; <a href="http://www.tomorrowsoffice.com"
+                _target="blank">tomorrowsoffice.com</a>
+            <span class="tag">Design and Dev by Halvas DesignWorks</span>
         </section>
-        
+
     </footer>
 
     <script defer src="js/main.js" type="module"></script>
 </body>
+
 </html>

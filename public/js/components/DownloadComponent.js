@@ -33,14 +33,14 @@ export default {
         </section>
     `,
 
-    data: function() {
+    data: function () {
         // just a stub for now
         return {
             message: "hey"
         }
     },
 
-    created: function() {
+    created: function () {
         console.log('form ready');
         this.$emit('enablehomebutton');
     },
@@ -49,8 +49,12 @@ export default {
         handleMail() {
             //debugger;
 
+            // add the flash message here -> this is the initial please wait, submitting message
+            document.querySelector(".flash-message").className = `flash-message show-msg`;
+
+
             let formdata = new FormData(document.querySelector('form')),
-            maildata = {};
+                maildata = {};
 
             // parse the form data
             // and populate the maildata object with the input values (the formdata entries)
@@ -66,39 +70,26 @@ export default {
                     'Accept': 'application/json, text/plain, */*',
                     'Content-type': 'application/json'
                 },
-    
+
                 body: JSON.stringify(maildata)
             })
                 .then(res => res.json())
                 .then(data => {
                     // remove this when testing is done and everything is working
                     console.log(data);
-    
+
                     if (data.response.includes("OK")) {
                         // we successfully sent an email via gmail and nodemailer!
-                       // reset the form
-                        document.querySelector('form').reset();
+                        // emit the success event
+                        this.$emit('authsuccess');
 
-                        // flash message
-                        this.flashMessage({msg: "From submission successful! One moment, redirecting...", class: "submit-success"});
-                        
                         // maybe disable pdf link here?
                     } else {
-                        this.flashMessage({ msg: "Submission failed! Please try again", class: "submit-fail"})
+                        this.$emit('authfail');
                     }
                 })
-            .catch((err) => console.log(err));
+                .catch((err) => console.log(err));
             // end of our fetch call
-        }, // end of handle mail function
-
-        flashMessage(msg) {
-            // do our flash messaging here (success or failure)
-
-            
-            // and then push the pdf route to the router if we managed to send the form
-            console.log(msg);
-
-            this.$emit('authsuccess');            
-        }
+        } // end of handle mail function
     }
 }
