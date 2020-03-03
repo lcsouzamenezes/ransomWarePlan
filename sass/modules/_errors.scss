@@ -1,0 +1,19 @@
+.error-page {
+    color: white;
+    padding: 2em;
+
+    h1 { font-size: 2.5em; font-weight: 900; margin-bottom: 0.5em; }
+
+    h4 { font-size: 1.5em; }
+
+    a { 
+        text-decoration: none; 
+        color: white; 
+        padding: 1em; 
+        background-color: $ui-green; 
+        display: inline-block;
+        font-size: 1.2em; font-weight: 900;
+        margin-top: 1em;
+        border-radius: 1.5em;
+    }
+}
